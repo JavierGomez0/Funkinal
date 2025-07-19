@@ -1,0 +1,485 @@
+/*
+  Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+  Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+
+  Created on : 19 jul 2025, 12:25:56
+  Author     : PC
+*/
+
+/*------------------------------------*/
+/* Reset básico */
+/*------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding-top: 100px; /* Para dejar espacio por header fijo */
+}
+
+/*------------------------------------*/
+/* Header fijo principal */
+/*------------------------------------*/
+.fondo {
+  display: flex;
+  align-items: center;
+  background-color: blue;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.fondo img {
+  height: 60px;
+  width: auto;
+}
+
+.TituloContenedor {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+/*------------------------------------*/
+/* Isla principal con iconos flotantes */
+/*------------------------------------*/
+.isla {
+  width: 250px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  padding: 5px;
+  z-index: 999;
+}
+
+/* Iconos dentro de la isla */
+.img-isla {
+  width: 25px;
+  height: 25px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.img-isla:hover {
+  transform: scale(1.2);
+}
+
+/*------------------------------------*/
+/* Menú desplegable (oculto por defecto) */
+/*------------------------------------*/
+.menu-desplegable {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #0099ff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+  z-index: 998;
+}
+
+/* Mostrar menú desplegable cuando tiene clase .show */
+.menu-desplegable.show {
+  display: block;
+}
+
+/*------------------------------------*/
+/* Botón flotante para menú móvil */
+/*------------------------------------*/
+.toggle-button {
+  display: none;
+  width: 50px;
+  height: 50px;
+  background-color: #0099ff;
+  border-radius: 50%;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  z-index: 1000;
+}
+
+/* Mostrar botón toggle solo en pantallas pequeñas */
+@media (max-width: 800px) {
+  .isla {
+    display: none;
+  }
+
+  .toggle-button {
+    display: block;
+  }
+}
+
+/*------------------------------------*/
+/* Menú flotante tipo GitHub */
+/*------------------------------------*/
+.menu-flotante {
+  display: none;
+  position: fixed;
+  top: 85px;
+  right: 60px;
+  background-color: #333;
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 999;
+  width: 160px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.menu-flotante.show {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.menu-flotante ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-flotante li {
+  padding: 10px;
+  border-bottom: 1px solid #555;
+}
+
+.menu-flotante li:last-child {
+  border-bottom: none;
+}
+
+.menu-flotante li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  display: block;
+}
+
+.menu-flotante li:hover {
+  background-color: #555;
+}
+
+/*------------------------------------*/
+/* Responsivo para encabezado */
+/*------------------------------------*/
+@media (max-width: 800px) {
+  .fondo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  .TituloContenedor {
+    margin-left: 0;
+    font-size: 20px;
+  }
+}
+
+/*------------------------------------*/
+/* Tooltip para íconos en isla */
+/*------------------------------------*/
+.isla li {
+  position: relative;
+  list-style: none;
+}
+
+.isla li::after {
+  content: attr(data-title);
+  position: absolute;
+  bottom: 140%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 11px;
+  white-space: nowrap;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
+.isla li::before {
+  content: "";
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.85) transparent transparent transparent;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 998;
+}
+
+.isla li:hover::after,
+.isla li:hover::before {
+  opacity: 1;
+}
+
+/*------------------------------------*/
+/* Contenedor del perfil (lupa) */
+/*------------------------------------*/
+.perfil-contenedor {
+  position: relative;
+}
+
+/*------------------------------------*/
+/* Buscador desplegable */
+/*------------------------------------*/
+.buscador {
+  display: none;
+  position: absolute;
+  top: 65px;
+  left: 0%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 8px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 999;
+  animation: deslizar 0.3s ease-out;
+}
+
+.buscador input {
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 15px;
+  width: 200px;
+}
+
+.buscador button {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Buscador alternativo */
+.buscador2 {
+  display: none;
+  position: absolute;
+  top: -5px;
+  right: 75%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 8px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 999;
+  animation: deslizar 0.3s ease-out;
+}
+
+.buscador2 input {
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 15px;
+  width: 200px;
+}
+
+.buscador2 button {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+/*------------------------------------*/
+/* Animación para el buscador */
+/*------------------------------------*/
+@keyframes deslizar {
+  0% {
+    transform: translateX(-50%) translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+
+/*------------------------------------*/
+/* Ícono de lupa móvil */
+/*------------------------------------*/
+.icono-lupa-movil {
+  display: none;
+  align-content: center;
+  text-align: center;
+  background: white;
+  position: fixed;
+  top: 25px;
+  right: 90px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 1001;
+  border-radius: 20px;
+}
+
+.icono-lupa-movil img {
+  width: 60%;
+  height: 60%;
+  transition: transform 0.3s ease;
+}
+
+.icono-lupa-movil:hover img {
+  transform: scale(1.2);
+}
+
+/* Mostrar lupa móvil y ocultar lupa escritorio */
+@media (max-width: 800px) {
+  .icono-lupa-movil {
+    display: block;
+  }
+
+  .perfil-contenedor {
+    display: none;
+  }
+
+  .isla [data-title="Busqueda"] {
+    display: none;
+  }
+}
+
+/*------------------------------------*/
+/* Sección menu funkos (productos) */
+/*------------------------------------*/
+.menu-funkos {
+  padding: 75px;
+}
+
+.menu-funkos h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Contenedor flexible de funkos */
+.contenedor-funkos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: 50px;
+}
+
+/* Item individual funko */
+.funko-item {
+  position: relative;
+  width: 180px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 12px;
+  transition: transform 0.5s ease;
+  z-index: 0;
+  background: white; /* Fondo para que el borde animado se vea bien */
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.funko-item img {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.funko-item:hover {
+  transform: scale(1.2);
+  background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet, red);
+  background-size: 600% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: arcoiris-fondo2 10s linear infinite;
+}
+
+.funko-item p {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+/*------------------------------------*/
+/* Animación para mover el gradiente de fondo */
+/*------------------------------------*/
+@keyframes arcoiris-fondo2 {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/*------------------------------------*/
+/* Pseudo-elemento para borde animado arcoíris */
+/*------------------------------------*/
+.funko-item::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 15px;
+  padding: 3px; /* Ancho del borde */
+  background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet, red);
+  background-size: 600% 100%;
+  animation: arcoiris-borde 8s linear infinite;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+/*------------------------------------*/
+/* Animación para mover el gradiente del borde */
+/*------------------------------------*/
+@keyframes arcoiris-borde {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
