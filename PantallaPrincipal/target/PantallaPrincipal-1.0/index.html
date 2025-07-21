@@ -27,7 +27,17 @@
           <button onclick="cerrarBuscador()">X</button>
         </div>
     </div>
-
+    
+   <div class="carrusel-container">
+    <div class="carrusel" id="carrusel">
+      <img src="https://kawaii.gt/image/cache/catalog/Artes%20/SLIDER/NENDOROID-BANNER-WEB-1350x640.jpg" alt="Nendoroid">
+      <img src="https://kawaii.gt/image/cache/catalog/Artes%20/SLIDER/TLOZTOTK-COVER-1350x640.jpg" alt="Zelda">
+      <img src="https://kawaii.gt/image/cache/catalog/Artes%20/SLIDER/GOLDEN-SNITCH-1350x640.jpg" alt="Snitch">
+    </div>
+    <button class="boton-carrusel anterior" onclick="moverCarrusel(-1)">‹</button>
+    <button class="boton-carrusel siguiente" onclick="moverCarrusel(1)">›</button>
+  </div>
+    
     <div class="menu-funkos">
       <h2>Colección de Funkos</h2>
       <div class="contenedor-funkos">
@@ -223,5 +233,16 @@
         }
       });
     </script>
+    
+    <script>
+    let indice = 0;
+
+    function moverCarrusel(direccion) {
+      const carrusel = document.getElementById("carrusel");
+      const total = carrusel.children.length;
+      indice = (indice + direccion + total) % total;
+      carrusel.style.transform = `translateX(-${indice * 100}%)`;
+    }
+  </script>
 </body>
 </html>
