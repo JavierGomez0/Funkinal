@@ -406,7 +406,8 @@ body {
 /* Item individual funko */
 .funko-item {
   position: relative;
-  width: 180px;
+  width: 250px;
+  height: 300px;
   padding: 10px;
   text-align: center;
   border-radius: 15px;
@@ -425,7 +426,7 @@ body {
 }
 
 .funko-item:hover {
-  transform: scale(1.2);
+  transform: scale(1.025);
   background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet, red);
   background-size: 600% 100%;
   -webkit-background-clip: text;
@@ -695,4 +696,65 @@ body {
 
 .siguiente {
   right: 10px;
+}
+
+/* From Uiverse.io by andrew-demchenk0 */ 
+.button {
+  position: relative;
+  width: 150px;
+  height: 40px;
+  top :5%;
+  left: 17%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #34974d;
+  background-color: #3aa856;
+}
+
+.button, .button__icon, .button__text {
+  transition: all 0.3s;
+}
+
+.button .button__text {
+  transform: translateX(30px);
+  color: #fff;
+  font-weight: 600;
+}
+
+.button .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: #34974d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button .svg {
+  width: 30px;
+  stroke: #fff;
+}
+
+.button:hover {
+  background: #34974d;
+}
+
+.button:hover .button__text {
+  color: #fff;
+}
+
+.button:hover .button__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.button:active .button__icon {
+  background-color: #2e8644;
+}
+
+.button:active {
+  border: 1px solid #2e8644;
 }
