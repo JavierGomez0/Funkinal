@@ -9,13 +9,13 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>IniciarSesion - Funkinal</title>
+    <title>IniciarSesion | FunKinal</title>
     <link rel="stylesheet" href="style/login.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="login-container">
-      <h2>Iniciar Sesión</h2>
+      <h2>Iniciar Sesion</h2>
       <form action="LoginServlet" method="post">
         <label for="email">Correo electrónico:</label>
         <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
