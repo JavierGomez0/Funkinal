@@ -489,7 +489,7 @@ body {
 
 /* From Uiverse.io by SharpTH */ 
 .btn-cssbuttons {
- --btn-color: black;
+ --btn-color: #3C6E71  ;
  position: fixed;
  top: 110px;
  right: 2%;
@@ -506,6 +506,9 @@ body {
  cursor: pointer;
  filter: drop-shadow(0 2px 8px rgba(39, 94, 254, 0.32));
  transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.btn-cssbuttons:hover {
+--btn-color: #353535 ;
 }
 
 .btn-cssbuttons::before {
@@ -698,6 +701,206 @@ body {
   right: 10px;
 }
 
+
+
+/* Botones en línea */
+.container-botones {
+  display: flex;
+  gap: 10px;
+  position: fixed;
+  right: 25px;
+  top: 20px;
+}
+
+/* Estilo del botón */
+.btns {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 0.9rem 2rem;
+  margin: 0;
+  font-family: inherit;
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  border-radius: 500px;
+  overflow: hidden;
+  background-color: #3C6E71; /* Fondo base */
+}
+
+.btns span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+  color: #D9D9D9 ; /* Letras normales negras */
+}
+
+.btns:hover span {
+  color: #D9D9D9; /* Letras hover */
+}
+
+.btns::before {
+  content: "";
+  background-color: #353535; /* Fondo hover */
+  width: 120%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+  z-index: 0;
+}
+
+.btns:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+
+/* Ocultar botones desde 800px hacia abajo */
+@media (max-width: 800px) {
+  .container-botones {
+    display: none;
+  }
+}
+
+/* Barra de navegación ejemplo */
+.navbar {
+  background-color: #284863;
+  color: #D9D9D9;
+  padding: 10px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('https://wallpapercave.com/wp/wp2830598.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Posicionamiento fijo respecto al borde */
+.container {
+  position: fixed;
+  top: 150px;
+  right: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+/* Título */
+.titulo {
+  font-size: 3rem;
+  color: #284863;
+  margin-bottom: 20px;
+}
+
+.cuadro {
+  width: 800px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+   transition: background-color 0.5s ease; /* Transición suave */
+}
+
+/* Texto justificado */
+.cuadro .texto {
+  text-align: justify;
+  width: 80%;
+}
+
+.cuadro:hover{
+    background-color: beige;
+}
+/* Botón */
+.btn-conocenos {
+  margin-top: 40px;
+  width: 250px;
+  height: 50px;
+  font-size: 15px;
+  padding: 10px 20px;
+  border: none;
+  background: #3C6E71;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-conocenos:hover {
+  background: #353535;
+}
+
+/* Responsive: centrar todo al reducir pantalla */
+@media (max-width: 800px) {
+  .container {
+    position: static;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .cuadro {
+      width: 400px;
+      height: 800px;
+  }
+}
+
+
+.carrusel-container {
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carrusel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carrusel img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.boton-carrusel {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.anterior {
+  left: 10px;
+}
+
+.siguiente {
+  right: 10px;
+}
+
 /* From Uiverse.io by andrew-demchenk0 */ 
 .button {
   position: relative;
@@ -709,7 +912,7 @@ body {
   display: flex;
   align-items: center;
   border: 1px solid #34974d;
-  background-color: #3aa856;
+  background-color: #3C6E71 ;
 }
 
 .button, .button__icon, .button__text {
@@ -718,7 +921,7 @@ body {
 
 .button .button__text {
   transform: translateX(30px);
-  color: #fff;
+  color: #D9D9D9 ;
   font-weight: 600;
 }
 
@@ -727,7 +930,7 @@ body {
   transform: translateX(109px);
   height: 100%;
   width: 39px;
-  background-color: #34974d;
+  background-color: #353535;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -739,11 +942,11 @@ body {
 }
 
 .button:hover {
-  background: #34974d;
+  background: #353535 ;
 }
 
 .button:hover .button__text {
-  color: #fff;
+  color: #D9D9D9 ;
 }
 
 .button:hover .button__icon {
@@ -757,4 +960,84 @@ body {
 
 .button:active {
   border: 1px solid #2e8644;
+}
+
+.container-botones {
+  display: flex;
+  gap: 10px;
+  position: fixed;
+  right: 25px;
+  top: 20px;
+}
+
+/* Estilo del botón */
+.btns {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 0.9rem 2rem;
+  margin: 0;
+  font-family: inherit;
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  border-radius: 500px;
+  overflow: hidden;
+  background: #3C6E71; /* Fondo base */
+}
+
+.btns span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+  color: black; /* Letras normales negras */
+}
+
+.btns:hover span {
+  color: #D9D9D9; /* Letras hover */
+}
+
+.btns::before {
+  content: "";
+  background: #353535; /* Fondo hover */
+  width: 120%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+  z-index: 0;
+}
+
+.btns:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+
+/* Ocultar botones desde 800px hacia abajo */
+@media (max-width: 800px) {
+  .container-botones {
+    display: none;
+  }
+  
+  .imagenb {
+      width: 300px;
+      height: 100px;
+      text-align: center;
+  }
+}
+
+/* Barra de navegación ejemplo */
+.navbar {
+  background-color: #284863;
+  color: #D9D9D9;
+  padding: 10px;
+}
+
+.imagenb {
+    position: relative;
+    width: 800px;
+    height: 600px;
 }

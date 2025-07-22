@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="https://www.funko.com/on/demandware.static/Sites-FunkoUS-Site/-/default/dwdf4d4162/images/favicons/funko-favicon-96x96.png" />
     <title>Funko Pop</title>
-    <link rel="stylesheet" href="Estilo/Style.css">
+    <link rel="stylesheet" href="Estilo/CssGeneral.css">
 </head>
 
 <body>
@@ -126,7 +126,9 @@
       </li>
       
       <li data-title="Configuración">
+          <a href="Inicio.jsp">
         <img src="https://images.icon-icons.com/3578/PNG/512/settings_configuration_icon_225724.png" alt="Imagen 3" class="img-isla">
+          </a>
       </li>
 
       <li data-title="Carrito">

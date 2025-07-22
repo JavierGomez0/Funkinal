@@ -12,7 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="https://www.funko.com/on/demandware.static/Sites-FunkoUS-Site/-/default/dwdf4d4162/images/favicons/funko-favicon-96x96.png" />
     <title>Funko Pop</title>
-    <link rel="stylesheet" href="Estilo/InicioCss.css">
+    <link rel="stylesheet" href="Estilo/CssGeneral.css">
+
 </head>
 
 <body>
@@ -21,16 +22,42 @@
         <img src="https://funko.com/on/demandware.static/Sites-FunkoUS-Site/-/default/dwbc961a9d/images/funko/svg/site-logo.svg" alt="Logo Pop">
         <div class="TituloContenedor">| Funko Pop Collection</div>
         
-        <div class="cuadro">
-            <button class="btns" style="width: 200px"> Iniciar Sesion </button>
-            <button class="btns" style="width: 150px"> Registrarce </button>
+        <div class="container-botones">
+            <button class="btns" ><span> Iniciar Sesion </span> </button>
+            <button class="btns" ><span> Registrarse</span> </button>
         </div>
     </div>
     
-    <div class = "Promocion">
-        <img src="https://funko.com/on/demandware.static/-/Sites-FunkoUS-Library/default/dwc2f80c39/images/funko/page-designer/hero/2025/07.%20July/PY_MLB_WEB_HOMEBANNER_CHAR.png" alt="alt"/>
-    </div>
+  <div class="Promocion">
+  <img class="imagenb" src="https://funko.com/on/demandware.static/-/Sites-FunkoUS-Library/default/dwc2f80c39/images/funko/page-designer/hero/2025/07.%20July/PY_MLB_WEB_HOMEBANNER_CHAR.png" alt="imagen">
+</div>
+
     
+    <!-- Botón redondo solo en móvil -->
+    <div class="toggle-button" id="toggleButton">☰</div>
+    
+    <!-- Menú desplegable tipo flotante -->
+    <div class="menu-flotante" id="menuFlotante">
+      <ul>
+        <li><a href="#"> Inicio De Sesion </a></li>
+        <li><a href="#"> Registrarse </a></li>
+        <li><a href="#"> Soporte </a></li>
+      </ul>
+    </div>
+
+
+      <div class="container">
+    <h1 class="titulo">Funkos</h1>
+    <div class="cuadro">
+        <p style="font-size: 40px;padding: 30px;">Datos Sobre Funkos</p>
+      <div class="texto">Los Funko Pop! son figuras coleccionables creadas por la empresa estadounidense Funko Inc. Su diseño característico incluye 
+                        cabezas grandes, ojos negros y cuerpos pequeños.
+                        Desde su lanzamiento en 2010, se han producido miles de modelos inspirados en personajes de películas, series, videojuegos, deportes y cultura pop.
+                        Gracias a sus ediciones limitadas y colaboraciones exclusivas, los Funkos se han convertido en objetos muy buscados por coleccionistas alrededor del mundo.</div>
+                        <p style="font-size: 20px;padding: 20px;">Somos la mejor tienda de Venta de Funkos en Guatemala</p>
+      <button class="btn-conocenos">Conócenos</button>
+    </div>
+  </div>
   <!-- From Uiverse.io by kamehame-ha --> 
     <div class="main-content">   
     <button class="btn-cssbuttons">
@@ -76,5 +103,34 @@
             <p>Dirección: Ciudad de Guatemala, Guatemala</p>
         </div>
     </footer>
+<script>
+    const toggleButton = document.getElementById("toggleButton");
+    const menu = document.getElementById("menuFlotante");
+
+    toggleButton.addEventListener("click", (e) => {
+      e.stopPropagation(); // Para evitar que el clic se propague
+      menu.classList.toggle("show");
+      toggleButton.textContent = menu.classList.contains("show") ? "X" : "☰";
+    });
+
+    // Cerrar al hacer clic fuera
+    document.addEventListener("click", (event) => {
+      if (!menu.contains(event.target) && event.target !== toggleButton) {
+        if (menu.classList.contains("show")) {
+          menu.classList.remove("show");
+          toggleButton.textContent = "☰";
+        }
+      }
+    });
+
+    // Cerrar al redimensionar
+    window.addEventListener("resize", () => {
+      if (menu.classList.contains("show")) {
+        menu.classList.remove("show");
+        toggleButton.textContent = "☰";
+      }
+    });
+</script>
+
 </body>
 </html>
