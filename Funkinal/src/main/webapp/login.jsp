@@ -9,7 +9,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Login - Funkinal</title>
+    <title>IniciarSesion - Funkinal</title>
     <link rel="stylesheet" href="style/login.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   </head>
@@ -25,7 +25,7 @@
 
         <button type="submit">Ingresar</button>
       </form>
-      <p>¿No tienes cuenta? <a href="register.jsp">Regístrate</a></p>
+      <p>¿No tienes cuenta? Crea una aqui --> <a href="register.jsp">Registrarse</a></p>
     </div>
   </body>
 </html>

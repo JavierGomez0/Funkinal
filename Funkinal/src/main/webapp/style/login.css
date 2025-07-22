@@ -7,16 +7,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     Author     : acord
 */
 
-/* Estilo para la vista de login */
 
-/* Estilo para la vista de login con paleta de colores */
-
+/* Archivo css para el login*/
 body {
-  background: #ffffff; /* fondo blanco */
+  background: #ffffff;
   font-family: 'Roboto', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  color: #D9D9D9; /* letras gris claro */
+  color: #D9D9D9;
 }
 
 .login-container {
@@ -26,14 +24,14 @@ body {
   padding: 40px 30px;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  color: #353535; /* texto oscuro dentro del contenedor */
+  color: #353535;
 }
 
 .login-container h2 {
   text-align: center;
   margin-bottom: 30px;
   font-weight: 700;
-  color: #284863; /* un azul oscuro para título */
+  color: #284863;
 }
 
 .login-container label {
@@ -47,7 +45,7 @@ body {
   width: 100%;
   padding: 12px;
   margin-top: 8px;
-  border: 1.5px solid #3C6E71; /* borde en color botón */
+  border: 1.5px solid #3C6E71;
   border-radius: 6px;
   font-size: 16px;
   box-sizing: border-box;
@@ -64,7 +62,7 @@ body {
   width: 100%;
   margin-top: 30px;
   padding: 14px;
-  background: #3C6E71; /* color botón */
+  background: #3C6E71;
   color: #ffffff;
   border: none;
   border-radius: 8px;
@@ -76,7 +74,7 @@ body {
 }
 
 .login-container button:hover {
-  background: #353535; /* hover botón */
+  background: #353535;
   box-shadow: 0 6px 12px rgba(53, 53, 53, 0.6);
 }
 
@@ -96,5 +94,4 @@ body {
 .login-container a:hover {
   text-decoration: underline;
 }
-
 
