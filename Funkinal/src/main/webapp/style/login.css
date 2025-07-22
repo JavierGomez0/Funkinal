@@ -9,73 +9,92 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 
 /* Estilo para la vista de login */
 
+/* Estilo para la vista de login con paleta de colores */
+
 body {
-  background: #f0f0f0;
-  font-family: Arial, sans-serif;
+  background: #ffffff; /* fondo blanco */
+  font-family: 'Roboto', Arial, sans-serif;
   margin: 0;
   padding: 0;
+  color: #D9D9D9; /* letras gris claro */
 }
 
 .login-container {
   background: #fff;
   max-width: 400px;
   margin: 80px auto;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  color: #353535; /* texto oscuro dentro del contenedor */
 }
 
 .login-container h2 {
   text-align: center;
-  margin-bottom: 20px;
-  color: #333;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #284863; /* un azul oscuro para título */
 }
 
 .login-container label {
   display: block;
   margin-top: 15px;
-  font-weight: bold;
-  color: #555;
+  font-weight: 600;
+  color: #353535;
 }
 
 .login-container input {
   width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1.5px solid #3C6E71; /* borde en color botón */
+  border-radius: 6px;
+  font-size: 16px;
   box-sizing: border-box;
+  transition: border-color 0.3s ease;
+  color: #353535;
+}
+
+.login-container input:focus {
+  border-color: #284863;
+  outline: none;
 }
 
 .login-container button {
   width: 100%;
-  margin-top: 20px;
-  padding: 12px;
-  background: #007bff;
-  color: #fff;
+  margin-top: 30px;
+  padding: 14px;
+  background: #3C6E71; /* color botón */
+  color: #ffffff;
   border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 18px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(60, 110, 113, 0.4);
 }
 
 .login-container button:hover {
-  background: #0056b3;
+  background: #353535; /* hover botón */
+  box-shadow: 0 6px 12px rgba(53, 53, 53, 0.6);
 }
 
 .login-container p {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 25px;
+  font-size: 14px;
+  color: #3C6E71;
 }
 
 .login-container a {
   text-decoration: none;
-  color: #007bff;
+  color: #3C6E71;
+  font-weight: 600;
 }
 
 .login-container a:hover {
   text-decoration: underline;
 }
+
 
