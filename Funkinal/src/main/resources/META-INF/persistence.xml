@@ -7,6 +7,8 @@
 <!--      Conexion a travez de la interfaz JDNI-->
     <jta-data-source>jdbc/fun</jta-data-source>
     
+    <class>model.Usuarios</class>
+    
 <!--    Clase Entidad-->
     <properties>
 <!--        Configuracion de Hibernate-->
