@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="https://www.funko.com/on/demandware.static/Sites-FunkoUS-Site/-/default/dwdf4d4162/images/favicons/funko-favicon-96x96.png" />
     <title>Funko Pop</title>
-    <link rel="stylesheet" href="Estilo/CssGeneral.css">
+    <link rel="stylesheet" href="style/CssGeneral.css">
 </head>
 
 <body>

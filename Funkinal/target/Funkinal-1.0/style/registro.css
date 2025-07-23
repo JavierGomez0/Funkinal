@@ -61,3 +61,40 @@ button {
 button:hover {
     background-color: #353535;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 100px; /* Para dejar espacio por header fijo */
+    background-color: grey;
+}
+
+.fondo {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.fondo img {
+    height: 60px;
+    width: auto;
+    filter: brightness(0) invert(1); /* Negro a blanco */
+}
+
+.TituloContenedor {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 15px;
+}
