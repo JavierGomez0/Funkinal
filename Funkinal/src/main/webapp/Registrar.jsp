@@ -27,18 +27,18 @@
                 <img src="Image/funkos.png" alt="Logo Funko" width="150">
             </div>
 
-            <form action="#" method="POST">
+            <form action="ServletRegistrar" method="POST">
                 <label for="nombre">Nombre</label>
                 <input type="text" id="nombre" name="nombre" required>
 
                 <label for="apellido">Apellido</label>
                 <input type="text" id="apellido" name="apellido" required>
 
-                <label for="email">Correo Electrónico</label>
-                <input type="email" id="email" name="email" required>
+                <label for="correo">Correo Electrónico</label>
+                <input type="email" id="correo" name="correo" required>
 
-                <label for="numero">Número Telefónico</label>
-                <input type="text" id="numero" name="numero" required>
+                <label for="telefono">Número Telefónico</label>
+                <input type="text" id="telefono" name="telefono" required>
 
                 <label for="password">Contraseña</label>
                 <input type="password" id="password" name="password" required>
