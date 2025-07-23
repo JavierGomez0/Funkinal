@@ -37,6 +37,9 @@ public class Usuarios {
         this.telefono = telefono;
     }
 
+    public Usuarios() {   
+    }
+
     public String getTelefono() {
         return telefono;
     }
