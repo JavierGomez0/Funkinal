@@ -11,12 +11,12 @@ import org.mindrot.jbcrypt.BCrypt;
  * @author informatica
  */
 public class Encriptar {
-    
-    public static String encriptar(String contraseña){
-        return BCrypt.hashpw(contraseña, BCrypt.gensalt());
+
+    public static String encriptar(String contrasena) {
+        return BCrypt.hashpw(contrasena, BCrypt.gensalt());
     }
-    
-    public static Boolean verificarContraseña(String contraseñaAVerificar, String hash){
-        return BCrypt.checkpw(contraseñaAVerificar, hash);
+
+    public static Boolean verificarContrasena(String contrasenaAVerificar, String hash) {
+        return BCrypt.checkpw(contrasenaAVerificar, hash);
     }
 }

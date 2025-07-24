@@ -23,7 +23,7 @@
         <div class="TituloContenedor">| Funko Pop Collection</div>
         
         <div class="container-botones">
-            <button class="btns" ><span> Iniciar Sesion </span> </button>
+            <button class="btns" onclick="location.href='login.jsp'"><span> Iniciar Sesion </span> </button>
             <button class="btns" onclick="location.href='Registrar.jsp'"><span> Registrarse</span> </button>
         </div>
     </div>

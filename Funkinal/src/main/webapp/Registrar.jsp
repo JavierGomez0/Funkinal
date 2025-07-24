@@ -41,7 +41,7 @@
                 <input type="text" id="telefono" name="telefono" required>
 
                 <label for="password">Contraseña</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="contrasena" required>
 
                 <button type="submit">Registrarse</button>
             </form>

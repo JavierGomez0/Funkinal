@@ -11,10 +11,10 @@ import javax.persistence.Table;
  *
  * @author informatica
  */
-
 @Entity
 @Table(name = "usuarios")
 public class Usuarios {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idUsuario;
@@ -24,20 +24,20 @@ public class Usuarios {
     private String apellido;
     @Column(name = "correo")
     private String correo;
-    @Column(name = "contraseña")
-    private String contraseña;
+    @Column(name = "contrasena")
+    private String contrasena;
     @Column(name = "telefono")
     private String telefono;
 
-    public Usuarios(String nombre, String apellido, String correo, String contraseña, String telefono) {
+    public Usuarios(String nombre, String apellido, String correo, String contrasena, String telefono) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
-        this.contraseña = contraseña;
+        this.contrasena = contrasena;
         this.telefono = telefono;
     }
 
-    public Usuarios() {   
+    public Usuarios() {
     }
 
     public String getTelefono() {
@@ -80,11 +80,11 @@ public class Usuarios {
         this.correo = correo;
     }
 
-    public String getContraseña() {
-        return contraseña;
+    public String getContrasena() {
+        return contrasena;
     }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setContrasena(String contraseña) {
+        this.contrasena = contraseña;
     }
 }
