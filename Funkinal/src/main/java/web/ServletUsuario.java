@@ -19,7 +19,7 @@ public class ServletUsuario extends HttpServlet{
         
         Encriptar e = new Encriptar();
         Usuarios u = new Usuarios();
-        u.setContraseña(e.encriptar(solicitud.getParameter("contraseña")));
+        u.setContrasena(e.encriptar(solicitud.getParameter("contraseña")));
         
         u.setNombre(solicitud.getParameter("nombre"));
         u.setApellido(solicitud.getParameter("apellido"));

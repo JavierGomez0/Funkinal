@@ -21,29 +21,21 @@
         <div class="fondo">
             <img src="https://funko.com/on/demandware.static/Sites-FunkoUS-Site/-/default/dwbc961a9d/images/funko/svg/site-logo.svg" alt="Logo Pop">
             <div class="TituloContenedor">| Funko Pop Collection</div>
+
             <div class="container-botones">
-                <button onclick="window.location.href = 'login.jsp'" class="btns"><span> Iniciar Sesion </span></button>
-                <button onclick="window.location.href = 'Registrar.jsp'" class="btns"><span> Registarse </span></button>
+                <button class="btns" onclick="location.href='login.jsp'"><span> Iniciar Sesion </span> </button>
+                <button class="btns" onclick="location.href='Registrar.jsp'"><span> Registrarse</span> </button>
             </div>
         </div>
+
         <div class="Promocion">
-            <img src="https://funko.com/on/demandware.static/-/Sites-FunkoUS-Library/default/dwc2f80c39/images/funko/page-designer/hero/2025/07.%20July/PY_MLB_WEB_HOMEBANNER_CHAR.png" alt="imagen">
-            <div class="container">
-                <div class="cuadro">
-                    <p style="font-size: 40px;padding: 30px;">Datos Sobre Funkos</p>
-                    <div class="texto">Los Funko Pop! son figuras coleccionables creadas por la empresa estadounidense Funko Inc. Su diseño característico incluye 
-                        cabezas grandes, ojos negros y cuerpos pequeños.
-                        Desde su lanzamiento en 2010, se han producido miles de modelos inspirados en personajes de películas, series, videojuegos, deportes y cultura pop.
-                        Gracias a sus ediciones limitadas y colaboraciones exclusivas, los Funkos se han convertido en objetos muy buscados por coleccionistas alrededor del mundo.</div>
-                    <p style="font-size: 20px;padding: 20px;">Somos la mejor tienda de Venta de Funkos en Guatemala</p>
-                    <button class="btn-conocenos">Conócenos</button>
-                </div>
-            </div>
+            <img class="imagenb" src="https://funko.com/on/demandware.static/-/Sites-FunkoUS-Library/default/dwc2f80c39/images/funko/page-designer/hero/2025/07.%20July/PY_MLB_WEB_HOMEBANNER_CHAR.png" alt="imagen">
         </div>
 
 
         <!-- Botón redondo solo en móvil -->
         <div class="toggle-button" id="toggleButton">☰</div>
+
         <!-- Menú desplegable tipo flotante -->
         <div class="menu-flotante" id="menuFlotante">
             <ul>
@@ -54,7 +46,18 @@
         </div>
 
 
-       
+        <div class="container">
+            <h1 class="titulo">Funkos</h1>
+            <div class="cuadro">
+                <p style="font-size: 40px;padding: 30px;">Datos Sobre Funkos</p>
+                <div class="texto">Los Funko Pop! son figuras coleccionables creadas por la empresa estadounidense Funko Inc. Su diseño característico incluye 
+                    cabezas grandes, ojos negros y cuerpos pequeños.
+                    Desde su lanzamiento en 2010, se han producido miles de modelos inspirados en personajes de películas, series, videojuegos, deportes y cultura pop.
+                    Gracias a sus ediciones limitadas y colaboraciones exclusivas, los Funkos se han convertido en objetos muy buscados por coleccionistas alrededor del mundo.</div>
+                <p style="font-size: 20px;padding: 20px;">Somos la mejor tienda de Venta de Funkos en Guatemala</p>
+                <button class="btn-conocenos">Conócenos</button>
+            </div>
+        </div>
         <!-- From Uiverse.io by kamehame-ha --> 
         <div class="main-content">   
             <button class="btn-cssbuttons">
